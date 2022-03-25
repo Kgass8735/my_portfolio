@@ -4,7 +4,7 @@ body {
     color: #191919;
     font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
     font-size: 14px;
-    background-image: url(backgroundpattern.png);
+    background-image: url(../images/backgroundpattern.png);
     background-size: contain;
     padding-top: 20px;
     padding-right: 20px;
@@ -31,9 +31,11 @@ font-weight: 700;
 font-style: normal;
 font-size: 24pt;
     color: #65EBFB;
+	margin: 20px 0px 20px 25px;
 }
 footer h1 {
-    color: #191919;	
+    color: #191919;
+	margin: auto;
 }
 h3 {
     font-size: 12px;
@@ -50,15 +52,25 @@ font-style: normal;
 }
 /*no background positon in brainbuffet vid but downloaded pic is 876 instead of 768*/
 header {
-    width: 768px;
+    width: 1280px;
     height: 250px;
-    background-image: url(portfoliologo.png);
-    background-position: 0% 25%;
+    background-image: url(../images/portfoliologo.png), -webkit-linear-gradient(270deg,rgba(255,240,240,1.00) 0%,rgba(250,245,255,1.00) 26.65%,rgba(255,255,255,1.00) 100%);
+    background-image: url(../images/portfoliologo.png), -moz-linear-gradient(270deg,rgba(255,240,240,1.00) 0%,rgba(250,245,255,1.00) 26.65%,rgba(255,255,255,1.00) 100%);
+    background-image: url(../images/portfoliologo.png), -o-linear-gradient(270deg,rgba(255,240,240,1.00) 0%,rgba(250,245,255,1.00) 26.65%,rgba(255,255,255,1.00) 100%);
+    background-image: url(../images/portfoliologo.png), linear-gradient(180deg,rgba(255,240,240,1.00) 0%,rgba(250,245,255,1.00) 26.65%,rgba(255,255,255,1.00) 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 50px 0px 0px 0px;
 }
 
+section {
+    width: 1000px;
+    hieght: 100px;
+    background-color: #BF6379;	
+}
 main {
-    width: 598px;
-    height: 1400px;
+    width: 1100px;
+    height: 1500px;
     float: left;
     padding-top: 10px;
     padding-right: 10px;
@@ -67,14 +79,11 @@ main {
 }
 
 footer {
-    width: 768px;
+    width: 1280px;
     height: 200px;
-    background-image: -webkit-linear-gradient(90deg,rgba(206,136,153,1.00) 36.24%,rgba(212,192,214,1.00) 63.06%,rgba(225,221,233,1.00) 76%,rgba(255,255,255,1.00) 100%);
-    background-image: -moz-linear-gradient(90deg,rgba(206,136,153,1.00) 36.24%,rgba(212,192,214,1.00) 63.06%,rgba(225,221,233,1.00) 76%,rgba(255,255,255,1.00) 100%);
-    background-image: -o-linear-gradient(90deg,rgba(206,136,153,1.00) 36.24%,rgba(212,192,214,1.00) 63.06%,rgba(225,221,233,1.00) 76%,rgba(255,255,255,1.00) 100%);
-    background-image: linear-gradient(0deg,rgba(206,136,153,1.00) 36.24%,rgba(212,192,214,1.00) 63.06%,rgba(225,221,233,1.00) 76%,rgba(255,255,255,1.00) 100%);
     clear: both;
     text-indent: 15px;
+    background-color: #BF6379;
 }
 
 aside {
@@ -89,14 +98,17 @@ aside {
 }
 
 #container {
-    width: 768px;
+    width: 1280px;
     height: auto;
     background-color: #FFFFFF;
     margin: auto;
 }
 nav {
-    width: 768px;
+    width: 1280px;
     height: 70px;
+    position: fixed;
+    top: 0px;
+    background-color: #FFFFFF;
 }
 nav ul li {
     display: block;
@@ -150,4 +162,115 @@ p a {
 .submit_btn:hover {
 	-webkit-box-shadow: 6px 6px 35px 1px #000000;
     box-shadow: 6px 6px 35px 1px #000000;
+}
+.column {
+    width: 250px;
+    height: auto;
+    float: left;
+    margin: 0px 40px 60px 40px;
+}
+.column img {
+	margin: 0px 0px 30px 0px;
+}
+video {
+    width: 600px;
+    margin: 0px 0px 0px 30px;
+    height: 600px;
+}
+
+@media (max-width: 1024px){
+	#container {
+		width: 768px;
+	}
+	header {
+		width: 768px;
+	}
+	nav {
+		width: 768px;
+	}
+	main {
+		width: 598px;
+		height: 2000px;
+	}
+	h1 {
+		margin: 20px 0px 20px 15px
+	}
+	footer h1 {
+		margin: 15px 0px 0px 0px;
+	}
+	footer {
+		width: 768px;
+	}
+	.column {
+		margin: 0px 20px 0px 25px
+	}
+	video {
+		height: 500px;
+		width: 500px;
+		margin: 40px 0px 0px 15px;
+	}
+}
+
+@media only screen and (max-width:375px){
+		#container {
+		width: 300px;
+	}
+	header {
+		width: 300px;
+		background-image: url("../images/300pxportfoliologo.png")
+	}
+	
+	nav {
+		width: 300px;
+		height: 350px;
+		position: static;
+	}
+	#container nav li {
+	display: list-item;
+	list-style-type: none;
+	float: none;
+	margin: 0px 0px 20px 0px;
+	width: 260px;
+	text-align: center;	
+	}
+	#container nav ul {
+	width: 260px;
+	}
+	nav a:link {
+	display: block;
+	width: 200px;
+	background-color: #65EBFB;
+	color: white;
+	}
+	nav a:visited {
+	text-decoration: none;
+	color: white;
+	}
+	
+	h1 {
+		margin: 50px 0px 20px 50px
+	}
+	main {
+		width: 280px;
+		height: auto;
+	}
+	
+	
+	footer {
+		width: 300px;
+	}
+	footer p, footer h1 {
+		margin: 15px 0px 0px 0px
+	}
+	aside {
+		display: none;
+	}
+	.column {
+    margin: 0px 20px 0px 25px;
+	}
+	video {
+		height: 250px;
+		margin: 35px 0px 0px 15px;
+		width: 250px;
+	}
 }
